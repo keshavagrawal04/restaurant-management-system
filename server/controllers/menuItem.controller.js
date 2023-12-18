@@ -1,5 +1,3 @@
-const MenuItem = require('../models/menuItem.model');
-
 const saveMenuItem = async (req, res) => {
     try {
 
@@ -40,4 +38,10 @@ const deleteMenuItem = async (req, res) => {
     }
 };
 
-module.exports = MenuItem;
+module.exports = {
+    saveMenuItem,
+    getMenuItems,
+    getMenuItem,
+    updateMenuItem,
+    deleteMenuItem
+};
