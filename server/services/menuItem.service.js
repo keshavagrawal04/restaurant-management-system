@@ -10,7 +10,7 @@ const saveMenuItem = async (payload) => {
     }
 };
 
-const getMenuItems = async (payload) => {
+const getMenuItems = async () => {
     try {
         const menuItems = await MenuItem.find();
         return menuItems;
@@ -28,7 +28,7 @@ const getMenuItem = async (menuItemId) => {
     }
 };
 
-const updateMenuItem = async ({ menuItemId, ...payload }) => {
+const updateMenuItem = async (menuItemId, payload) => {
     try {
         const menuItems = await MenuItem.findOneAndUpdate({ _id: menuItemId }, payload, { new: true });
         return menuItems;
